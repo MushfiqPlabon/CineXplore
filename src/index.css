@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@custom-variant dark (&);
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #323139;
+  --color-card: #ffffff;
+  --color-card-foreground: #121113;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #121113;
+  --color-primary: #8b5cf6;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f1f0f2;
+  --color-secondary-foreground: #121113;
+  --color-muted: #f1f0f2;
+  --color-muted-foreground: #6b6375;
+  --color-accent: #8b5cf6;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #dc2626;
+  --color-border: #e5e4e7;
+  --color-input: #f1f0f2;
+  --color-ring: #8b5cf6;
+  --color-chart-1: #8b5cf6;
+  --color-chart-2: #38bdf8;
+  --color-chart-3: #4ade80;
+  --color-chart-4: #facc15;
+  --color-chart-5: #fb92ab;
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --font-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", sans-serif;
+  --font-mono:
+    ui-monospace, "Cascadia Code", "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-foreground;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: #0d0d12;
+      --color-foreground: #b3a9c9;
+      --color-card: #16171d;
+      --color-card-foreground: #e4e0ea;
+      --color-popover: #16171d;
+      --color-popover-foreground: #e4e0ea;
+      --color-primary: #a78bfa;
+      --color-primary-foreground: #ffffff;
+      --color-secondary: #2a2b33;
+      --color-secondary-foreground: #e4e0ea;
+      --color-muted: #2a2b33;
+      --color-muted-foreground: #9ca3af;
+      --color-accent: #a78bfa;
+      --color-accent-foreground: #111827;
+      --color-destructive: #f87171;
+      --color-border: #2e303a;
+      --color-input: #2a2b33;
+      --color-ring: #a78bfa;
+      --color-chart-1: #a78bfa;
+      --color-chart-2: #7dd3fc;
+      --color-chart-3: #86efac;
+      --color-chart-4: #fde047;
+      --color-chart-5: #fba3b5;
+      --shadow:
+        0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
+      --shadow-md:
+        0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+      --shadow-lg:
+        0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
