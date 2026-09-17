@@ -25,25 +25,30 @@ VITE_TMDB_ACCESS_TOKEN=your_access_token_here
 ### Installation
 
 ```bash
-npm install
+bun install
 ```
 
 ### Development
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 ### Build
 
 ```bash
-npm run build
+bun run build
 ```
 
 ### Lint
 
 ```bash
-npm run lint
+bun run lint
+```
+### Format
+
+```bash
+bunx --yes prettier --write .
 ```
 
 ## Tech Stack
